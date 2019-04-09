@@ -1,8 +1,8 @@
+[The following is a copy paste of this document on Google Docs, which you can comment on, and I might update it more regularly](https://docs.google.com/document/d/1gRWr3Uph_aQ7bTIpC79_FF7Xg8y0T2dIMzWB8TRSga0/edit#)
+
 # The Human Market
 
 Ok, first before you try to understand what this is, [read this essay](https://thenextsystem.org/community-democracy-mutual-aid), once you’ve done it and you understand what is the endgoal, continue reading.
-
-[You can also read this README on Google Docs and comment it.](https://docs.google.com/document/d/1gRWr3Uph_aQ7bTIpC79_FF7Xg8y0T2dIMzWB8TRSga0/edit#)
 
 ## How it works
 
