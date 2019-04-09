@@ -2,6 +2,8 @@
 
 Ok, first before you try to understand what this is, [read this essay](https://thenextsystem.org/community-democracy-mutual-aid), once you’ve done it and you understand what is the endgoal, continue reading.
 
+[You can also read this README on Google Docs and comment it.](https://docs.google.com/document/d/1gRWr3Uph_aQ7bTIpC79_FF7Xg8y0T2dIMzWB8TRSga0/edit#)
+
 ## How it works
 
 The Human Market is a blockchain-based decentralized market and democratic tool. Using the power of the Stellar crypto-currency, which has many technical and pratical advantages over other ones like Bitcoins.
@@ -16,7 +18,7 @@ If an institution is selected by 50% of the democracy, then the intitution is se
 
 Each institution has to set a number of their weekly/monthly upkeep, which is public. The institutions can also set specific funding targets for specific projects. And everyone should see what are the current projects of the institutions, their organization, their members, and how they spend all the money (since it’s all public in the ledger).
 
-Each democracy votes the percentage of an automated payment transaction tax, and all the transactions of all the companies and people registered in that democracy are ensured to comply with it, by smart contracts.
+Each democracy votes the percentage of an [automated payment transaction tax](https://en.wikipedia.org/wiki/Automated_Payment_Transaction_tax), and all the transactions of all the companies and people registered in that democracy are ensured to comply with it, by smart contracts.
 
 Each institution is ranked by priority decided by the voting system. The taxes are always automatically directed to the unfunded intitutions, by the priority ranking, after one is funded, they start to go to the next. When all the required institutions are funded, the rest of the taxes collected automatically go to the democratic fund, and the community can then vote if it’s redirected to specific projects or organizations. Or we can create a local credit system based on that fund.
 
@@ -45,7 +47,9 @@ We can then create a cooperative distribution company that takes care of supplyi
 This allows vegans to save money on food and basic neccesities by buying it communally in bulk and removing supermarkets or stores from the equation, which should noticeably reduce the cost of living. And at the same time it empowers them to directly support vegan activism in their cities. Which are both incredible motivators to join the market.
 
 With this we should then start to generate a consolidated stream of money that can then be invested to grow the system and the community.
-Volunteering
+
+## Volunteering
+
 I’m a web developer, and I specilize in frontend, if it’s technically possible to do all the blockchain things required by this system through the Horizon API and Stellar smart contracts, then I can create the app as a pure static SPA and build it on Github.
 
 I currently don’t know enough about Stellar or smart contracts to know if it’s possible with the current API. So I would really appreaciate the help of someone with more knowledge of crypto development.
