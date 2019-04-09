@@ -1,73 +1,51 @@
-# Human Market API Server
+# The Human Market
 
-Human Market is a project to utilize a closed market economy to allow people to fund organizations or activism activities. Currently being developed for the vegan community, in an attempt to fight back against carnist beliefs, by allowing us to fund activism by purchasing vegan products by vegan companies in the vegan market.
+Ok, first before you try to understand what this is, [read this essay](https://thenextsystem.org/community-democracy-mutual-aid), once you’ve done it and you understand what is the endgoal, continue reading.
 
-## Currencies
+## How it works
 
-The project intends to allow people to pay in any currency they wish. Online platforms like Payoneer, Paypal, or MercadoPago. Or any criptocurrency, like Bitcoins, Litecoins, Etherium, Dogecoins, etc. It shall not allow to pay directly with credit cards, as it's government-regulated and not native to the Internet.
+The Human Market is a blockchain-based decentralized market and democratic tool. Using the power of the Stellar crypto-currency, which has many technical and pratical advantages over other ones like Bitcoins.
 
-## Contributions
+Crypto addresses are used as wallets for all members. Members can create or join democracies, companies, and non-profit organizations, all registered on the decentralized ledger.
 
-There will be 3 different kind of contributions in the market:
+By the use of smart contracts we can allow democracies or company owners to control the money of group-owned wallets.
 
-- Carbon contribution is applied individually to each company product according to the carbon footprint of the product determined by a market comite, the tax income goes to carbon restoration organizations. For now this will be 0 as it's impractical, but should be implemented in the future when we have the resources.
-- Market contribution is applied obligatory to each person purchase, the contributions go to the market maintenance and development, and the rest goes to the organizations activities the market deem worthy. All the data money distribution should be completely transparent and accessible in real time.
-- Voluntary contribution after the market contribution, people can choose to pay an extra (think Humble Bundle). By default it's pre-selected on a specific rate, and all the contribution also goes to the market. However, people can choose to not pay it at all, or pay a bigger contribution, or they can choose to pick another non-profit organization of their choosing
+Each individual on a democracy can vote by crafting a list of the institutions (non-profit organizations) that they want to fund with their taxes. Whenever they make a transaction from their address, a small fee goes to funding these institutions from priority order.
 
-The market administration decides which companies and organizations are allowed to sell and receive funding from the market. The politics of this are for the organization funding the market to be handled. Thus you can make a local market for your local community and handle only local businesses, and fund local activities, and local people can contribute, and you can set the contributions percentage any way you want.
+If an institution is selected by 50% of the democracy, then the intitution is selected for suggested funding. When this happens, everyone in the democracy is automatically opted in into supporting the institution, and people that don’t want to, have to manually opt-out (but they can). Additionally, companies that are registered in that democracy, also start to automatically contribute to those institutions with their taxes.
 
-## Entities
+Each institution has to set a number of their weekly/monthly upkeep, which is public. The institutions can also set specific funding targets for specific projects. And everyone should see what are the current projects of the institutions, their organization, their members, and how they spend all the money (since it’s all public in the ledger).
 
-In the market there are multiple registered entities:
+Each democracy votes the percentage of an automated payment transaction tax, and all the transactions of all the companies and people registered in that democracy are ensured to comply with it, by smart contracts.
 
-- **Companies** are the ones where the producs come from, they are the generators o value.
-- **Organizations** are non-for-profit that receive funding by the market, this could be activism. The organizations are grabbed and administration-approved from a OpenNonProfits.org page.
-- **Stores** are the physical spaces where the physical goods of the companies are shipped from or made available or distributed to customers, they have a geographic location.
-- **People** are the ones actually funding the market by spending their money on it. People can have permissions to administrate different companies, organizations or stores in the market.
+Each institution is ranked by priority decided by the voting system. The taxes are always automatically directed to the unfunded intitutions, by the priority ranking, after one is funded, they start to go to the next. When all the required institutions are funded, the rest of the taxes collected automatically go to the democratic fund, and the community can then vote if it’s redirected to specific projects or organizations. Or we can create a local credit system based on that fund.
 
-## Administration
+Payment wages to people in companies and organizations, along with a future basic income program, can all be programmed to be done automatically from the companies/organizations/democracies crypto wallets with the use of smart contracts.
 
-The administration has the following responsabilities:
+Additionally those democracies could themselves be part of a higher order democracies to fund other regional-based institutions.
 
-- Has to approve or ban companies and organizations from the market based on a code of conduct they decide.
-- Validate the identity of companies and organizations.
-- Configure all the market parameters, like contribution rates, funding organizations, server configuration, etc.
-- Take care of maintaining the software infrastructure of the market by holding server keys and building redundance to maintain uptime, etc.
+Since it’s all decentralized, the market would be ready to be used by any community just by registering in any place of the world. And in the future the communities can start to join forces within the same application.
 
-## Transparency
+## The Vegan Factor
 
-Contributions made to the market, organizations and fundrisings should all be accessible and visible in real time, with leaderboard for people to see top donnors on specific organizations, or fundrisings.
+The movement cannot work if we can’t convince people to start using the system for all their purchases.
 
-## Development
+By crafting a market of vegan food and products, where vegans can
 
-To make the market as open and accessible as possible, we should make it as an API, and develop the frontend separatedly. This way anyone can create new clients for the market effortlessly.
+A little background on the situation in my city:
 
-The technology picked for the API is GraphQL, for a better separation of concerns with the front-end.
+> I live in Argentina, which is not a first world country, and as such vegans in my city struggle to find vegan products like tofu, tempeh, plant-based milks, pastry, donuts, fast food, cakes, meat replacements, egg replacements, yogurths, mayonnaise, soap, shampoo, ethically sourced clothes, cosmetics, and stuff like that, because you can't find it in supermarkets. There are some local entrepreneurs or small companies that provide these products in the market, but they distribute them inefficiently on health food stores, and sell through Facebook pages, it's a horrible system. However there is a local community already growing around these companies, and they regularly hold vegan food open markets where you can go and try all the city offerings.
 
-## Markets Network
+> There is also the issue for knowing vegan food availability in local restaurants. Restaurants could register to display their vegan options, and form a local map of vegan offerings. With this, veganism becomes much easier to hop into, and each new vegan is a new citizen of the next system.
 
-Since we can all create local markets, we need a way for markets to interact with each others. Local markets should be able to connect in a two-way fashion with regional or global markets. This way we can fund regional and local activities. We could have a regional market that helps funds regional projects, and can be build on top of a local market.
+As you can see, this community already exists. And it would benefit greatly from a digital market with a distributing solution. Furthermore, the interests of the vegan community completely coincide with goal the essay portraits.
 
-## Fundrisings
+We can then create a cooperative distribution company that takes care of supplying the community with food from local farms, and ethically sourced goods, and it also acts as a centralized entity for the distribution of basic goods by delivery to the citizens. They of course buy the items from the distributing company, as they would buy from any other company in the digital market. And the customers pick how they want it delivered, or if they want to pick it up.
 
-The market-registered organizations could publish fundrisings to finance specific projects that cannot be financed by the regular income of the organization.
+This allows vegans to save money on food and basic neccesities by buying it communally in bulk and removing supermarkets or stores from the equation, which should noticeably reduce the cost of living. And at the same time it empowers them to directly support vegan activism in their cities. Which are both incredible motivators to join the market.
 
-On the paying page customers should be able to see the list of current fundrisings that might interest them to collaborate to, and add funds to the purchase to take advantage of the ease of transaction.
+With this we should then start to generate a consolidated stream of money that can then be invested to grow the system and the community.
+Volunteering
+I’m a web developer, and I specilize in frontend, if it’s technically possible to do all the blockchain things required by this system through the Horizon API and Stellar smart contracts, then I can create the app as a pure static SPA and build it on Github.
 
-Each fundrising would have a leaderboard with the individuals with the most donations, from this market and also international markets in the markets network.
-
-If anyone wants to donate anonymously or not figure in the leaderboard, they can do it by themselves by sending money to a Bitcoin address or something like that, it doesn't matter.
-
-## Services and API
-
-Service products could also be published by companies, or a market API could be used to use the market buying process in your website or app. The market should work as a paying platform in a Stripe-like fashion, where it allows your to handle transactions. This way we can offer a service for SASS companies that also help fund the movement.
-
-So imagine you're buying something online, and you're given a modal to pay for it, there you can pick the market that you want to handle the transaction. You can pick a market without taxes, or you can pick your local market because you want to fund your local community. The company that sells the online service doesn't have to handle transactions, credit cards or anything, and the person that pays ir paying contributions to a specific market of their choosing.
-
-## Non Profits Organizations Registry
-
-There is currently an idea in the burner to make a non-profits registry online that also works with an API and allows markets in the network to pick them up for funding.
-
-## Roadmap And Development
-
-https://trello.com/b/2KPRtgiL/humanmarketorg
+I currently don’t know enough about Stellar or smart contracts to know if it’s possible with the current API. So I would really appreaciate the help of someone with more knowledge of crypto development.
