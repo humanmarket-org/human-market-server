@@ -68,31 +68,31 @@ module.exports = {
         test: /\.otf(\?.*)?$/,
         use: 'file-loader?name=/fonts/[name].[ext]&mimetype=application/font-otf'
       },
-      // {
-      //   test: /\.s[ca]ss$/,
-      //   use: [
-      //     { loader: 'style-loader' },
-      //     {
-      //       loader: 'css-loader', // typings-for-css-modules-loader
-      //       options: {
-      //         localIdentName: '[folder]_[local]_[hash:base64:3]',
-      //         modules: true,
-      //         importLoaders: 1,
-      //         // minimize: !devMode,
-      //         // namedExport: true,
-      //         camelCase: true
-      //       }
-      //     },
-      //     {
-      //       loader: 'sass-loader',
-      //       options: {
-      //         outputStyle: 'expanded',
-      //         indentedSyntax: true,
-      //         data: "@import 'src/style/common';"
-      //       }
-      //     }
-      //   ]
-      // },
+      {
+        test: /\.s[ca]ss$/,
+        use: [
+          { loader: 'style-loader' },
+          {
+            loader: 'css-loader', // typings-for-css-modules-loader
+            options: {
+              localIdentName: '[folder]_[local]_[hash:base64:3]',
+              modules: true,
+              importLoaders: 1,
+              // minimize: !devMode,
+              // namedExport: true,
+              camelCase: true
+            }
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              outputStyle: 'expanded',
+              indentedSyntax: true,
+              // data: "@import 'src/style/common';"
+            }
+          }
+        ]
+      },
       {
         test: /\.less$/,
         use: [{
