@@ -10,6 +10,7 @@ const Search = Input.Search;
 const SubMenu = Menu.SubMenu;
 
 import NavMenu from './NavMenu';
+import Logo from './Logo';
 
 interface HeaderProps {
   onRequestAuth: () => void;
@@ -17,10 +18,7 @@ interface HeaderProps {
 
 export default function Header(props: HeaderProps) {
   const [drawerVisible, setDrawerVisible] = useState(false);
-  const windowSize = useWindowSize().innerWidth;
-  const smallMenu = windowSize < 1000;
-  const hideLogo = windowSize < 800;
-
+  const smallScreen = useWindowSize().innerWidth < 1000;
 
   return (
     <div className={th.header}>
@@ -31,14 +29,14 @@ export default function Header(props: HeaderProps) {
         <div className={th.community}>Mar del Plata</div>
       </div> */}
       <div className={th.menuBar}>
-        {smallMenu ? <Button
+        {smallScreen ? <Button
           className={th.veganburger}
           size='large'
           ghost={true}
           onClick={() => setDrawerVisible(!drawerVisible)}>
           &#9776;
         </Button> : null}
-        {smallMenu ? <Drawer
+        {smallScreen ? <Drawer
           className={th.drawer}
           title=''
           placement='left'
@@ -46,11 +44,10 @@ export default function Header(props: HeaderProps) {
           onClose={() => setDrawerVisible(false)}
           visible={drawerVisible}
         >
+          <Logo className={th.title}/>
           <NavMenu className={th.vmenu} vertical={true}/>
         </Drawer> : null}
-        {!hideLogo ? <Link to='/' className={th.title}>
-          Vegano<span className={th.titleWorld}>🌎</span>Mercado
-        </Link> : null}
+        {!smallScreen ? <Logo className={th.title}/> : null}
         <InputGroup compact className={th.search}>
           <Select defaultValue='Mar del Plata'>
             <Option value='MarDelPlata'>Mar del Plata</Option>
@@ -62,7 +59,7 @@ export default function Header(props: HeaderProps) {
             placeholder='Buscar en la comunidad'
             onSearch={value => console.log(value)}/>
         </InputGroup>
-        {!smallMenu ? <NavMenu className={th.menu}/> : <div className={th.expand}></div>}
+        {!smallScreen ? <NavMenu className={th.menu}/> : <div className={th.expand}></div>}
         <Button
           className={th.auth}
           ghost={true}
