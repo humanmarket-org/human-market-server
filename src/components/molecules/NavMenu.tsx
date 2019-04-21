@@ -27,7 +27,7 @@ export default function NavMenu(props: NavMenuProps) {
         <Menu.Item key='market:9'>Stickers</Menu.Item>
       </SubMenu>
       <SubMenu title='Lugares'>
-        <Menu.Item key='places:1'><Link to='/lugares/restaurantes'>Restaurantes</Link></Menu.Item>
+        <Menu.Item key='places:1'><Link to='/lugares/gastronomicos'>Gastronómicos</Link></Menu.Item>
         <Menu.Item key='places:2'><Link to='/lugares/dieteticas'>Dietéticas</Link></Menu.Item>
         <Menu.Item key='places:3'><Link to='/lugares/centros-comunitarios'>Centros Comunitarios</Link></Menu.Item>
       </SubMenu>
