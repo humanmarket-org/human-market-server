@@ -3,7 +3,7 @@ import { initReactI18next } from 'react-i18next';
 import * as en from './locales/en/translation.json';
 import * as es from './locales/es/translation.json';
 
-import Backend from 'i18next-xhr-backend';
+// import Backend from 'i18next-xhr-backend';
 import LanguageDetector from 'i18next-browser-languagedetector';
 // not like to use this?
 // have a look at the Quick start guide
@@ -12,7 +12,7 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 i18n
   // load translation using xhr -> see /public/locales
   // learn more: https://github.com/i18next/i18next-xhr-backend
-  .use(Backend)
+  // .use(Backend)
   // detect user language
   // learn more: https://github.com/i18next/i18next-browser-languageDetector
   .use(LanguageDetector)
@@ -21,17 +21,20 @@ i18n
   // init i18next
   // for all options read: https://www.i18next.com/overview/configuration-options
   .init({
-    lng: 'en',
     fallbackLng: 'en',
     whitelist: ['en', 'es'],
     // preload: ['en', 'es'],
     debug: true,
-
+    resources: {
+      en: {translation: en},
+      es: {translation: es}
+    },
     interpolation: {
       escapeValue: false, // not needed for react as it escapes by default
     },
     detection: {
-      order: ['navigator', 'cookie'],
+      order: ['localStorage', 'navigator'],
+      caches: ['localStorage'],
     },
     react: {
       wait: true,
