@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { Menu } from 'antd';
 const SubMenu = Menu.SubMenu;
 import Logo from './Logo';
@@ -10,13 +11,15 @@ interface NavMenuProps {
 }
 
 export default function NavMenu(props: NavMenuProps) {
+  const { t } = useTranslation();
+
   return (
     <Menu
       theme='dark'
       mode={props.vertical ? 'inline' : 'horizontal'}
       defaultSelectedKeys={['market:1']}
       className={props.className}>
-      <SubMenu title='Mercado'>
+      <SubMenu title={t('sections.market')}>
         <Menu.Item key='market:1'><Link to='/mercado/almacen'>Almacén</Link></Menu.Item>
         <Menu.Item key='market:2'>Pastelería</Menu.Item>
         <Menu.Item key='market:3'>Delivery</Menu.Item>
@@ -26,12 +29,12 @@ export default function NavMenu(props: NavMenuProps) {
         <Menu.Item key='market:8'>Servicios</Menu.Item>
         <Menu.Item key='market:9'>Stickers</Menu.Item>
       </SubMenu>
-      <SubMenu title='Lugares'>
+      <SubMenu title={t('sections.places')}>
         <Menu.Item key='places:1'><Link to='/lugares/gastronomicos'>Gastronómicos</Link></Menu.Item>
         <Menu.Item key='places:2'><Link to='/lugares/dieteticas'>Dietéticas</Link></Menu.Item>
         <Menu.Item key='places:3'><Link to='/lugares/centros-comunitarios'>Centros Comunitarios</Link></Menu.Item>
       </SubMenu>
-      <SubMenu title='Comunidad'>
+      <SubMenu title={t('sections.community')}>
         <Menu.Item key='community:1'><Link to='/comunidad/organizaciones'>Organizaciones</Link></Menu.Item>
         <Menu.Item key='community:2'><Link to='/comunidad/activismo'>Activismo</Link></Menu.Item>
         <Menu.Item key='community:3'><Link to='/comunidad/agorismo'>Agorismo</Link></Menu.Item>

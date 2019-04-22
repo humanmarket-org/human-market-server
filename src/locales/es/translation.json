@@ -1,0 +1,16 @@
+{
+  "home": "Inicio",
+  "logo": {
+    "human": "Humano",
+    "market": "Mercado"
+  },
+  "sections": {
+    "market": "Mercado",
+    "places": "Lugares",
+    "community": "Comunidad"
+  },
+  "searchPlaceholder": "Buscar en la comunidad",
+  "registration": "Registrarse/Ingresar",
+  "hello": "Hola!",
+  "identify": "Identificarse"
+}

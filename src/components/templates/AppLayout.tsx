@@ -1,5 +1,6 @@
 import * as React from 'react';
 
+import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { Layout, Menu, Breadcrumb } from 'antd';
 const { Content } = Layout;
@@ -13,9 +14,9 @@ interface AppLayoutProps {
   onRequestAuth: () => void;
 }
 
-const routes = [{
+const routes = (t) => [{
   path: '',
-  breadcrumbName: 'Inicio'
+  breadcrumbName: t('home')
 }, {
   path: 'mercado',
   breadcrumbName: 'Mercado'
@@ -30,6 +31,8 @@ function itemRender(route, params, routes, paths) {
 }
 
 export default function AppLayout(props: AppLayoutProps) {
+  const { t } = useTranslation();
+
   return (
     <Layout>
       <Header onRequestAuth={props.onRequestAuth}></Header>
@@ -37,7 +40,7 @@ export default function AppLayout(props: AppLayoutProps) {
         <Breadcrumb
           style={{ margin: '16px 0' }}
           itemRender={itemRender}
-          routes={routes}/>
+          routes={routes(t)}/>
         <div className='content'>
           {props.children}
         </div>

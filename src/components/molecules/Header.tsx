@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import * as th from './header.sass';
 import useWindowSize from '@rehooks/window-size';
+import { useTranslation } from 'react-i18next';
 
 import { Link } from 'react-router-dom';
 import { Menu, Input, Button, Select, Icon, Drawer } from 'antd';
@@ -14,11 +15,17 @@ import Logo from './Logo';
 
 interface HeaderProps {
   onRequestAuth: () => void;
+  onChangeLang?: (lang: string) => void;
+  currentLang?: string;
 }
 
 export default function Header(props: HeaderProps) {
   const [drawerVisible, setDrawerVisible] = useState(false);
   const smallScreen = useWindowSize().innerWidth < 1000;
+
+  const { t, i18n } = useTranslation();
+
+  console.log(i18n);
 
   return (
     <div className={th.header}>
@@ -56,7 +63,7 @@ export default function Header(props: HeaderProps) {
             <Option value='Berlin'>Berlin</Option>
           </Select>
           <Search
-            placeholder='Buscar en la comunidad'
+            placeholder={t('searchPlaceholder')}
             onSearch={value => console.log(value)}/>
         </InputGroup>
         {!smallScreen ? <NavMenu className={th.menu}/> : <div className={th.expand}></div>}
@@ -65,8 +72,16 @@ export default function Header(props: HeaderProps) {
           ghost={true}
           shape='round'
           onClick={props.onRequestAuth}>
-          Registrarse / Ingresar
+          {t('registration')}
         </Button>
+        <Select
+          value={i18n.language}
+          showArrow={false}
+          className={th.lang}
+          onChange={(lng) => i18n.changeLanguage(lng)}>
+          <Option value='en'>EN</Option>
+          <Option value='es'>ES</Option>
+        </Select>
       </div>
     </div>
   );
