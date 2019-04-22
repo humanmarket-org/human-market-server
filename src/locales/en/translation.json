@@ -1,13 +1,22 @@
 {
   "home": "Home",
   "logo": {
-    "human": "Human",
-    "market": "Market"
+    "first": "Human",
+    "last": "Market"
   },
   "sections": {
     "market": "Market",
     "places": "Places",
     "community": "Community"
+  },
+  "auth": {
+    "title": "Sign up or log-in",
+    "email": "Email",
+    "password": "Password",
+    "submit": "Accept",
+    "validations": {
+      "required": "Please enter your {{field}}"
+    }
   },
   "searchPlaceholder": "Search in the community",
   "registration": "Sign-up/Log-in",

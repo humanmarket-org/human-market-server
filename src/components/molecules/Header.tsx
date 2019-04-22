@@ -15,8 +15,6 @@ import Logo from './Logo';
 
 interface HeaderProps {
   onRequestAuth: () => void;
-  onChangeLang?: (lang: string) => void;
-  currentLang?: string;
 }
 
 export default function Header(props: HeaderProps) {

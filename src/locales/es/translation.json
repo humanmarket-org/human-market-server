@@ -1,16 +1,24 @@
 {
   "home": "Inicio",
   "logo": {
-    "human": "Humano",
-    "market": "Mercado"
+    "first": "Mercado",
+    "last": "Humano"
   },
   "sections": {
     "market": "Mercado",
     "places": "Lugares",
     "community": "Comunidad"
   },
+  "auth": {
+    "title": "Registrarse o ingresar",
+    "email": "Email",
+    "password": "Contraseña",
+    "submit": "Aceptar",
+    "validations": {
+      "required": "Por favor ingresa tu {{field}}"
+    }
+  },
   "searchPlaceholder": "Buscar en la comunidad",
   "registration": "Registrarse/Ingresar",
-  "hello": "Hola!",
-  "identify": "Identificarse"
+  "hello": "Hola!"
 }

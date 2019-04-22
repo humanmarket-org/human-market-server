@@ -19,7 +19,7 @@ export default function Logo(props: LogoProps) {
       className={cx(th.logo, props.className, {[th.rotating]: rotating})}
       onMouseOver={() => setRotating(true)}
       onMouseOut={() => setRotating(false)}>
-      {t('logo.human')}<span className={th.logoWorld}></span>{t('logo.market')}
+      {t('logo.first')}<span className={th.logoWorld}></span>{t('logo.last')}
     </Link>
   );
 }
