@@ -23,8 +23,6 @@ export default function Header(props: HeaderProps) {
 
   const { t, i18n } = useTranslation();
 
-  console.log(i18n);
-
   return (
     <div className={th.header}>
       {/* <div className={th.banner}>
