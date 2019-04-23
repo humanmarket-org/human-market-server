@@ -29,7 +29,7 @@ export default Form.create({ name: 'identify' })(
     const { visible, onCancel, onDone, form } = props;
 
     const [loading, setLoading] = useState(false);
-    const [authMode, setAuthMode] = useState(AuthMode.emailPass);
+    const [authMode, setAuthMode] = useState(AuthMode.oauth);
     const { t }  = useTranslation();
 
     function handleCredentials (credentials: Credentials) {
@@ -50,12 +50,13 @@ export default Form.create({ name: 'identify' })(
           type='primary'
           form={authMode === AuthMode.emailPass ? 'loginForm' : null}
           key='submit'
+          onClick={authMode === AuthMode.oauth ? onCancel : null}
           htmlType='submit'>
           {t('auth.submit')}
         </Button>
         ]}
       >
-        <Tabs defaultActiveKey={AuthMode.oauth} onChange={setAuthMode} tabBarStyle={{textAlign: 'center'}}>
+        <Tabs defaultActiveKey={authMode} onChange={setAuthMode} tabBarStyle={{textAlign: 'center'}}>
           <Tabs.TabPane key={AuthMode.oauth} tab='Open Authorization'>
             <OAuths setLoading={setLoading} loading={loading} onSuccess={handleCredentials}/>
           </Tabs.TabPane>
