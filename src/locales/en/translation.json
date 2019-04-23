@@ -21,5 +21,8 @@
   "searchPlaceholder": "Search in the community",
   "registration": "Sign-up/Log-in",
   "hello": "Hello!",
-  "identify": "Identify"
+  "identify": "Identify",
+  "routes": {
+
+  }
 }

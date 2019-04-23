@@ -7,7 +7,7 @@ import AuthContainer from './containers/AuthContainer';
 import AppLayout from './templates/AppLayout';
 import MarketSearch from './pages/MarketSearch';
 import LocationsMap from './pages/LocationsMap';
-import AuthModal from './organisms/AuthModal';
+import AuthModal from './organisms/AuthModal/AuthModal';
 
 interface AppProps {
 

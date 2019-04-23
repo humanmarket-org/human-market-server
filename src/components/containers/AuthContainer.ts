@@ -5,6 +5,13 @@ type AuthState = {
   auth: string
 };
 
+export type Credentials = {
+  id: string;
+  email: string;
+  name: string;
+  wallet: string;
+};
+
 export default class AuthContainer extends Container<AuthState> {
   state = {
     modal: false,

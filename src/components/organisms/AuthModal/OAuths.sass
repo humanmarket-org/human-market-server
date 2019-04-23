@@ -1,0 +1,19 @@
+.OAuths
+  button
+    display: block
+    margin: 0 auto
+      bottom: 12px
+    &:last-child
+      margin-bottom: 0
+
+@mixin BrandButton($color)
+  background: $color
+  border-color: darken($color, 10%)
+  &:hover, &:focus
+    background: lighten($color, 10%)
+    border-color: $color
+
+.Facebook
+  +BrandButton(#3C5A99)
+.Google
+  +BrandButton(#de5246)
