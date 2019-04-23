@@ -16,7 +16,11 @@
     "submit": "Accept",
     "validations": {
       "required": "Please enter your {{field}}"
-    }
+    },
+    "facebook": "Identify with Facebook",
+    "google": "Identify with Google",
+    "oauth": "Open Authorization",
+    "emailPass": "Email/Password"
   },
   "searchPlaceholder": "Search in the community",
   "registration": "Sign-up/Log-in",

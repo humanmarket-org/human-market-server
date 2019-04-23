@@ -57,10 +57,10 @@ export default Form.create({ name: 'identify' })(
         ]}
       >
         <Tabs defaultActiveKey={authMode} onChange={setAuthMode} tabBarStyle={{textAlign: 'center'}}>
-          <Tabs.TabPane key={AuthMode.oauth} tab='Open Authorization'>
+          <Tabs.TabPane key={AuthMode.oauth} tab={t('auth.oauth')}>
             <OAuths setLoading={setLoading} loading={loading} onSuccess={handleCredentials}/>
           </Tabs.TabPane>
-          <Tabs.TabPane key={AuthMode.emailPass} tab='Email/Password'>
+          <Tabs.TabPane key={AuthMode.emailPass} tab={t('auth.emailPass')}>
             <EmailPassAuth form={form} setLoading={setLoading} onSuccess={handleCredentials}/>
           </Tabs.TabPane>
         </Tabs>

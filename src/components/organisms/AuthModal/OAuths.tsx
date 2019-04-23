@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import th from './OAuths.sass';
 import { Button } from 'antd';
 import { Credentials } from '../../containers/AuthContainer';
+import { useTranslation } from 'react-i18next';
 
 interface OAuthsProps {
   onSuccess: (credentials: Credentials) => void;
@@ -14,6 +15,8 @@ const socialMedia = {
 };
 
 export default function OAuths(props: OAuthsProps) {
+  const { t } = useTranslation();
+
   function handleAuthorization (strategy: string) {
     props.setLoading(true);
     setTimeout(() => {
@@ -35,7 +38,7 @@ export default function OAuths(props: OAuthsProps) {
         disabled={props.loading}
         onClick={() => handleAuthorization('facebook')}
         className={th.Facebook}>
-        Sign up with Facebook
+        {t('auth.facebook')}
       </Button>
       <Button
         type='primary'
@@ -43,7 +46,7 @@ export default function OAuths(props: OAuthsProps) {
         disabled={props.loading}
         onClick={() => handleAuthorization('google')}
         className={th.Google}>
-        Sign up with Google
+        {t('auth.google')}
       </Button>
     </div>
   );

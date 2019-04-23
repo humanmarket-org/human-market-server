@@ -1,7 +1,17 @@
+import React from 'react';
 import i18n from 'i18next';
-import { initReactI18next } from 'react-i18next';
+import { initReactI18next, useTranslation, I18nextProvider } from 'react-i18next';
 import * as en from './locales/en/translation.json';
 import * as es from './locales/es/translation.json';
+
+import { LocaleProvider } from 'antd';
+import es_ES from 'antd/lib/locale-provider/es_ES';
+import en_GB from 'antd/lib/locale-provider/en_GB';
+
+const antdLocales = {
+  es: es_ES,
+  en: en_GB
+};
 
 // import Backend from 'i18next-xhr-backend';
 import LanguageDetector from 'i18next-browser-languagedetector';
@@ -41,6 +51,21 @@ i18n
       useSuspense: false
     }
   });
+
+function AntdLangSetter ({children}: {children: any}) {
+  const { i18n } = useTranslation();
+  return <LocaleProvider locale={antdLocales[i18n.language]}>
+    {children}
+  </LocaleProvider>;
+}
+
+export function I18nProvider ({children}: {children: any}) {
+  return <I18nextProvider i18n={i18n}>
+    <AntdLangSetter>
+      {children}
+    </AntdLangSetter>
+  </I18nextProvider>;
+}
 
 
 export default i18n;
