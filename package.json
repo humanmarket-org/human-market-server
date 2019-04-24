@@ -86,6 +86,7 @@
     "i18next-xhr-backend": "^2.0.1",
     "immutability-helper": "^3.0.0",
     "include-media": "^1.4.9",
+    "jwt-decode": "^2.2.0",
     "lodash": "^4.17.11",
     "markdown-loader": "^5.0.0",
     "npm-check-updates": "^3.1.8",
